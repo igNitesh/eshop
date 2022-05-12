@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{%block content %}
+<section class="filetrSec">
+    <div class="category">Select Category</div>
+    <div class="item">
+        <ul>
+            <li>Me Time</li>
+            <li>Get Togther</li>
+            <li>Party Time</li>
+            <li>Save Big</li>
+        </ul>
+    </div>
+</section>
+<div class="container-fluid">
+    <div class="row">
+        <!-- filter -->
+        <div class="col-lg-3 mx-auto">
+            <div class="list-group list-filter">
+                <a href="/" 
+                class="list-group-item list-group-item-action">
+                All</a>
+               {% for category in categories %} 
+                <a href="/?category={{category.id}}" 
+                class="list-group-item list-group-item-action">
+                {{category.name}}</a>
+                {%endfor%}
+            </div>
+        </div>
+        <!-- All product -->
+        <div id="product" class="col-lg-9 mx-auto">
+            <div class="row mx-auto">
+                {%for product in products%}
+                <div class="card mx-auto mb-3" style="width: 18rem;">
+                    <img src="{{product.image.url}}" class="card-img-top" alt="product">
+                    <div class="card-body">
+                        <p class="card-title">{{product.name}}</p>
+                        <p class="card-title">Price {{product.price}}</p>
+                        <!-- <p class="card-text">{{product.description}}</p> -->
+                        <a href="#" class="btn cartbtn">Add To Cart</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock%}

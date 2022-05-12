@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="p-4 m-4 mx-auto">
+        <div class="auth  mx-auto col-lg-10">
+            <h2 class="alert logo">GLAU</h2>
+            <form action="/signup" method="POST">
+                {% csrf_token %}
+                <!-- name -->
+                <div class="mb-4 row">
+                    <label for="User_Name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input required type="text" class="form-control" id="inputPassword" placeholder="Name"
+                            name="name">
+                    </div>
+                </div>
+
+                <!-- phone Number -->
+
+                <div class="mb-4 row">
+                    <label for="User_Number" class="col-sm-2 col-form-label">Number</label>
+                    <div class="col-sm-10">
+                        <input required type="text" class="form-control" id="inputPassword" placeholder="Number"
+                            name="phone">
+                    </div>
+                </div>
+
+                <!-- Email -->
+
+                <div class="mb-4 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input required type="email" class="form-control" id="inputPassword" placeholder="email"
+                            name="email">
+                    </div>
+                </div>
+
+                <!-- password -->
+
+                <div class="mb-4 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input required type="password" class="form-control" id="inputPassword" placeholder="Password"
+                            name="password">
+                    </div>
+                </div>
+
+                <div>
+                    <button class="auth-btn" type="submint">Signup</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

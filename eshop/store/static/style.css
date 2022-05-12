@@ -1,0 +1,65 @@
+.cartbtn {
+    color: #d3002b;
+    border: 1px solid #d3002b;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 0px 15px;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-family: "GothamRoundedMedium";
+    font-size: 1rem;
+    cursor: pointer;
+    /* margin-top: 30px; */
+}
+
+p {
+    font-family: GothamRoundedBook;
+    ;
+    color: #000;
+}
+
+section {
+    /* border: 2px solid black; */
+    background-color: #d3002b;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.category {
+    width: 20%;
+    position: relative;
+    background: url(/themes/havmornew/images/filter-button.webp) no-repeat 35px 28px;
+    background-size: auto;
+    padding: 28px 0px 22px;
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: "GothamRoundedBook";
+    background-size: 10%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item {
+    width: 80%;
+}
+
+.item ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.item ul li {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: "GothamRoundedBook";
+    width: 25%;
+    padding: 10px 0px 0px;
+    position: relative;
+}
